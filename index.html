@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerForensics Solutions - Your Trusted Partner in Cybersecurity</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <link rel="icon" type="image/x-icon" href="/NewLogo_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/style.css">
+</head>
+<body class="montserrat bg-gray-50 text-gray-800" role="document">
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent-color text-white px-4 py-2 rounded z-50">
+        Skip to main content
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-lg z-40 transition-all duration-300" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                                  <!-- Logo -->
+                    <div class="flex items-center">
+                        <a href="/index.html"
+                            class="flex items-center transform hover:scale-105 transition-all duration-300">
+                            <img src="/NewLogo_full brand.png" alt="HackerForensics Solutions Logo"
+                                class="h-20 w-auto">
+                        </a>
+                    </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/index.html" class="text-gray-700 hover:text-[#21B0C7] transition-colors duration-300 font-medium" aria-label="Navigate to Home section">Home</a>
+                    <a href="/pages/about.html" class="text-gray-700 hover:text-[#21B0C7] transition-colors duration-300 font-medium" aria-label="Navigate to Who We Are section">Who We Are</a>
+                    <a href="/pages/services.html" class="text-gray-700 hover:text-[#21B0C7] transition-colors duration-300 font-medium" aria-label="Navigate to What We Do section">What We Do</a>
+                    <a href="/pages/contact.html" class="btn-primary text-white px-6 py-3 rounded-sm font-semibold" aria-label="Navigate to Get in Touch section">Get in Touch</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <div class="w-6 h-6 flex flex-col justify-center items-center">
+                        <span class="block w-5 h-0.5 bg-gray-700 mb-1 transition-all duration-300"></span>
+                        <span class="block w-5 h-0.5 bg-gray-700 mb-1 transition-all duration-300"></span>
+                        <span class="block w-5 h-0.5 bg-gray-700 transition-all duration-300"></span>
+                    </div>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden" id="mobile-menu" role="menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                    <a href="/index.html" class="block px-3 py-2 text-gray-700 hover:text-[#21B0C7]" role="menuitem">Home</a>
+                    <a href="/pages/about.html" class="block px-3 py-2 text-gray-700 hover:text-[#21B0C7]" role="menuitem">Who We Are</a>
+                    <a href="/pages/services.html" class="block px-3 py-2 text-gray-700 hover:text-[#21B0C7]" role="menuitem">What We Do</a>
+                    <a href="/pages/contact.html" class="block px-3 py-2 text-gray-700 hover:text-[#21B0C7]" role="menuitem">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden cyber-grid" role="banner">
+        <main id="main-content">
+               <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="/assets/images/herobg.png" 
+                 alt="Professional healthcare setting" 
+                 class="w-full h-full object-cover">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+        </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32 md:py-32">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="slide-in-left">
+                        <h2 class="dm-serif text-4xl lg:text-6xl font-bold mb-6" style="color: #02355B;">
+                       Trusted Partner in 
+                            <span class="typewriter block" style="color: #21B0C7;">Cybersecurity</span>
+                        </h2>
+                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                            We safeguard businesses against the growing challenges of the digital age. Our comprehensive cybersecurity solutions protect your organization while enabling you to thrive securely in today's connected world.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#what-we-do" class="bg-primary hover:bg-[#21B0C7] text-white px-8 py-4 rounded-sm font-semibold text-center" aria-label="Explore our cybersecurity solutions">
+                                Explore Our Solutions
+                            </a>
+                            <a href="mailto:info@hackerforensic.co.zw" target="_blank" class="border-2 border-[#02355B] text-[#02355B] px-8 py-4 rounded-sm font-semibold hover:bg-[#02355B] hover:text-white transition-all duration-300 text-center" aria-label="Schedule a free consultation">
+                                Schedule Free Consultation
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide-in-right relative">
+                        <div class="floating">
+                            <img src="/assets/images/HeroBanner.png" 
+                                 alt="Cybersecurity professional monitoring digital security systems" 
+                                 class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-[#21B0C7] rounded-sm pulse-glow flex items-center justify-center">
+                            <span class="text-white text-3xl">🔒</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section id="who-we-are" class="py-20 bg-primary" role="region" aria-labelledby="who-we-are-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 id="who-we-are-heading" class="dm-serif text-4xl lg:text-5xl font-bold text-white mb-2" >Who We Are</h2>
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+                    We are cybersecurity specialists committed to protecting your digital assets and empowering your business to operate with confidence in an increasingly connected world.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-up">
+                    <img src="/assets/images/aboutlanding.png" 
+                         alt="Cybersecurity team collaborating on digital security solutions" 
+                         class="rounded-2xl shadow-lg w-full h-96 object-cover">
+                </div>
+                <div class="fade-in-up">
+                    <div class="grid gap-8">
+                        <div>
+                            <h3 class="dm-serif text-2xl font-bold mb-2 text-white" >Our Mission</h3>
+                            <p class="text-gray-200 leading-relaxed">
+                                To empower businesses with the knowledge, tools, and strategies needed to achieve lasting cyber resilience. We serve as your first line of defense, providing reliable protection and expert guidance in today's ever-evolving digital landscape.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="dm-serif text-2xl font-bold mb-4 text-white" >Our Vision</h3>
+                            <p class="text-gray-200 leading-relaxed">
+                                We envision a secure digital future where businesses can embrace technology with complete confidence, knowing their data, systems, and people are fully protected against emerging cyber threats.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Core Values -->
+            <div class="mt-20 grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-gray-50 p-8 rounded-2xl text-center">
+
+                    <h3 class="dm-serif text-xl font-bold mb-2 text-primary" >Client-Centered</h3>
+                    <p class="text-gray-600">Every solution is carefully designed around your unique business needs and challenges, ensuring maximum effectiveness and value.</p>
+                </div>
+                <div class="card-hover bg-gray-50 p-8 rounded-2xl text-center">
+
+                    <h3 class="dm-serif text-xl font-bold mb-2 text-primary" >Future-Focused</h3>
+                    <p class="text-gray-600">We stay ahead of emerging threats and adapt our strategies to protect you before new challenges arise in the cyber landscape.</p>
+                </div>
+                <div class="card-hover bg-gray-50 p-8 rounded-2xl text-center">
+
+                    <h3 class="dm-serif text-xl font-bold mb-2 text-primary" >Resource-Driven</h3>
+                    <p class="text-gray-600">Equipped with cutting-edge tools, skilled experts, and innovative solutions to tackle any cybersecurity challenge effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="what-we-do" class="py-20 bg-slate-100" role="region" aria-labelledby="what-we-do-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 id="what-we-do-heading" class="dm-serif text-4xl lg:text-5xl font-bold mb-6" style="color: #02355B;">Our Business Solutions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We provide comprehensive cybersecurity services that cover every aspect of digital protection, from prevention and assessment to incident response and recovery.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
+                <!-- Cybersecurity Solutions -->
+                <div class="xl:col-span-2">
+                    <div class="card-hover bg-white p-8 rounded-2xl shadow-lg h-full">
+                        <div class="flex items-center mb-6">
+
+                            <h3 class="dm-serif text-2xl font-bold text-primary">Cybersecurity Solutions</h3>
+                        </div>
+                        <p class="text-gray-600 font-medium mb-6">Comprehensive protection services to safeguard your organization against all types of cyber threats.</p>
+                        <ul class="space-y-3 text-gray-600 font-regular">
+                            <li class="flex items-center"><span class="text-[#21B0C7] mr-2">✓</span> Network Security & Intrusion Detection</li>
+                            <li class="flex items-center"><span class="text-[#21B0C7] mr-2">✓</span> Application Security Assessments</li>
+                            <li class="flex items-center"><span class="text-[#21B0C7] mr-2">✓</span> Cyber Threat Intelligence</li>
+                            <li class="flex items-center"><span class="text-[#21B0C7] mr-2">✓</span> Employee Training & Security Awareness</li>
+                            <li class="flex items-center"><span class="text-[#21B0C7] mr-2">✓</span> Penetration Testing & Vulnerability Assessments</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Risk Management -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <h3 class="dm-serif text-xl font-bold text-primary">Risk Management</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Proactive strategies to identify and mitigate risks before they impact your business.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-[#21B0C7] mr-2">•</span> Risk Assessments</li>
+                        <li class="flex items-center"><span class="text-[#21B0C7] mr-2">•</span> Policy Development</li>
+                        <li class="flex items-center"><span class="text-[#21B0C7] mr-2">•</span> Compliance Frameworks</li>
+                    </ul>
+                </div>
+                
+                <!-- Digital Forensics -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <h3 class="dm-serif text-xl font-bold text-primary">Digital Forensics</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Swift incident response and investigation services to minimize impact and restore confidence.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="text-[#21B0C7] mr-2">•</span> Incident Response</li>
+                        <li class="flex items-center"><span class="text-[#21B0C7] mr-2">•</span> Computer Forensics</li>
+                        <li class="flex items-center"><span class="text-[#21B0C7] mr-2">•</span> Data Recovery</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="/pages/contact.html" class="bg-primary hover:bg-[#21B0C7] text-white px-8 py-4 rounded-sm font-semibold inline-block" aria-label="Discuss your cybersecurity needs with our experts">
+                    Discuss Your Security Needs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-accent/60" role="region" aria-labelledby="why-choose-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 id="why-choose-heading" class="dm-serif text-4xl lg:text-5xl font-bold mb-6" style="color: #02355B;">Why Choose HackerForensics Solutions?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We combine technical expertise with a deep understanding of business needs to deliver cybersecurity solutions that truly protect and empower your organization.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center card-hover bg-gray-50 p-6 rounded-2xl">
+                    <img src="/assets/images/reason 1.png" 
+                         alt="Team of cybersecurity experts collaborating" 
+                         class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="dm-serif text-lg font-bold mb-2" style="color: #02355B;">Proven Expertise</h3>
+                    <p class="text-gray-600 text-sm">A team of highly skilled professionals dedicated to cybersecurity excellence and continuous learning.</p>
+                </div>
+                <div class="text-center card-hover bg-gray-50 p-6 rounded-2xl">
+                    <img src="/assets/images/reason 2.png" 
+                         alt="Customized cybersecurity solutions planning" 
+                         class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="dm-serif text-lg font-bold mb-2" style="color: #02355B;">Tailored Solutions</h3>
+                    <p class="text-gray-600 text-sm">We customize every strategy to align perfectly with your business goals and security requirements.</p>
+                </div>
+                <div class="text-center card-hover bg-gray-50 p-6 rounded-2xl">
+                    <img src="/assets/images/reason 3.png" 
+                         alt="Comprehensive cybersecurity protection layers" 
+                         class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="dm-serif text-lg font-bold mb-2" style="color: #02355B;">End-to-End Protection</h3>
+                    <p class="text-gray-600 text-sm">From prevention to response, we cover every layer of security your organization needs.</p>
+                </div>
+                <div class="text-center card-hover bg-gray-50 p-6 rounded-2xl">
+                    <img src="/assets/images/reason 4.png" 
+                         alt="Dedicated cybersecurity support team" 
+                         class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="dm-serif text-lg font-bold mb-2" style="color: #02355B;">Trusted Support</h3>
+                    <p class="text-gray-600 text-sm">Dedicated help and training services to keep your team prepared and informed about security best practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients and Partners Section -->
+    <section class="py-20 bg-gray-50" role="region" aria-labelledby="clients-partners-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 id="clients-partners-heading" class="dm-serif text-4xl lg:text-5xl font-bold mb-6" style="color: #02355B;">Our Clients & Partners</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We proudly serve organizations across various industries, from small businesses to large enterprises, helping them build robust cybersecurity defenses.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center ">
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover flex items-center justify-center h-20">
+                   <img src="/assets/images/client 1.png" alt="">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover flex items-center justify-center h-20">
+                   <img src="/assets/images/client 2.png" alt="">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover flex items-center justify-center h-20">
+                   <img src="/assets/images/client 3.png" alt="">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover flex items-center justify-center h-20">
+                    <img src="/assets/images/client 4.png" alt="">
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm card-hover flex items-center justify-center h-20">
+                    <img src="/assets/images/client 5.png" alt="">
+                </div>
+               
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-lg text-gray-600 mb-6">Join hundreds of satisfied clients who trust us with their cybersecurity needs.</p>
+                <a href="mailto:info@hackersforensics.co.zw" target="_blank" class="btn-primary text-white px-8 py-4 rounded-sm font-semibold inline-block" aria-label="Start your cybersecurity journey with us">
+                    Start Your Security Journey
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get in Touch Section -->
+    <section id="get-in-touch" class="py-20 bg-[#02355B] text-white" role="region" aria-labelledby="get-in-touch-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 id="get-in-touch-heading" class="dm-serif text-4xl lg:text-5xl font-bold mb-6">Ready to Secure Your Digital Future?</h2>
+                <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                    Take the first step towards comprehensive cybersecurity protection. Our experts are ready to assess your needs and design a security strategy that fits your business perfectly.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="text-center card-hover bg-white/10 backdrop-blur-md p-8 rounded-2xl">
+                    <h3 class="dm-serif text-xl font-bold mb-4">General Enquiries</h3>
+                    <p class="text-blue-100 mb-4">Get in touch for cybersecurity consultations and general information about our services.</p>
+                    <a href="mailto:info@hackersforensics.co.zw" class="text-[#21B0C7] hover:text-white transition-colors duration-300 font-medium" aria-label="Send email to info@hackersforensics.co.zw">
+                        info@hackersforensics.co.zw
+                    </a>
+                </div>
+                
+                <div class="text-center card-hover bg-white/10 backdrop-blur-md p-8 rounded-2xl">
+                    <h3 class="dm-serif text-xl font-bold mb-4">Training Programs</h3>
+                    <p class="text-blue-100 mb-4">Enhance your team's cybersecurity knowledge with our comprehensive training programs.</p>
+                    <a href="mailto:trainings@hackerforensics.co.zw" class="text-[#21B0C7] hover:text-white transition-colors duration-300 font-medium" aria-label="Send email to trainings@hackerforensics.co.zw">
+                        trainings@hackerforensics.co.zw
+                    </a>
+                </div>
+                
+                <div class="text-center card-hover bg-white/10 backdrop-blur-md p-8 rounded-2xl">
+                    <h3 class="dm-serif text-xl font-bold mb-4">Emergency Support</h3>
+                    <p class="text-blue-100 mb-4">Need immediate assistance? Our help desk is here to provide rapid support when you need it most.</p>
+                    <a href="mailto:help@hackerforensics.co.zw" class="text-[#21B0C7] hover:text-white transition-colors duration-300 font-medium" aria-label="Send email to help@hackerforensics.co.zw">
+                        help@hackerforensics.co.zw
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <div class="inline-block bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
+                    <h3 class="dm-serif text-2xl font-bold mb-4">Start Your Security Assessment Today</h3>
+                    <p class="text-blue-100 mb-6 max-w-2xl">
+                        Don't wait for a security incident to happen. Let us help you identify vulnerabilities and strengthen your defenses before threats become reality.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="mailto:info@hackersforensics.co.zw?subject=Free Security Assessment" 
+                           class="bg-[#21B0C7] text-white px-8 py-4 rounded-sm font-semibold hover:bg-white hover:text-[#02355B] transition-all duration-300" 
+                           aria-label="Request a free security assessment">
+                            Request Free Assessment
+                        </a>
+                        <a href="mailto:info@hackersforensics.co.zw?subject=Schedule Consultation" 
+                           class="border-2 border-[#21B0C7] text-[#21B0C7] px-8 py-4 rounded-sm font-semibold hover:bg-[#21B0C7] hover:text-white transition-all duration-300" 
+                           aria-label="Schedule a consultation with our cybersecurity experts">
+                            Schedule Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-1">
+                      
+                        <div>
+                           <img src="/NewLogo_white.png" alt="HackerForensics Logo" class="h-20 w-auto">
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6 max-w-md">
+                        Protecting businesses against cyber threats while enabling them to thrive securely in today's digital landscape. We combine technical expertise with practical solutions that work.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="dm-serif text-lg font-bold mb-4">Our Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="/pages/services.html" class="hover:text-[#21B0C7] transition-colors duration-300">Cybersecurity Solutions</a></li>
+                        <li><a href="/pages/services.html" class="hover:text-[#21B0C7] transition-colors duration-300">Risk Management</a></li>
+                        <li><a href="/pages/services.html" class="hover:text-[#21B0C7] transition-colors duration-300">Digital Forensics</a></li>
+                        <li><a href="/pages/services.html" class="hover:text-[#21B0C7] transition-colors duration-300">Incident Response</a></li>
+                        <li><a href="/pages/services.html" class="hover:text-[#21B0C7] transition-colors duration-300">Security Training</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="dm-serif text-lg font-bold mb-4">Quick Contact</h4>
+                    <div class="space-y-4 text-gray-300">
+                        <div>
+                            <p class="font-medium text-white mb-1">General Enquiries</p>
+                            <a href="mailto:info@hackersforensics.co.zw" class="text-[#21B0C7] hover:text-white transition-colors duration-300">
+                                info@hackersforensics.co.zw
+                            </a>
+                        </div>
+                        <div>
+                            <p class="font-medium text-white mb-1">Training Programs</p>
+                            <a href="mailto:trainings@hackerforensics.co.zw" class="text-[#21B0C7] hover:text-white transition-colors duration-300">
+                                trainings@hackerforensics.co.zw
+                            </a>
+                        </div>
+                        <div>
+                            <p class="font-medium text-white mb-1">Emergency Support</p>
+                            <a href="mailto:help@hackerforensics.co.zw" class="text-[#21B0C7] hover:text-white transition-colors duration-300">
+                                help@hackerforensics.co.zw
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 HackerForensics Solutions. All rights reserved.
+                </p>
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">
+                    Designed and developed by <a href="https://www.claudius-mainja.com" class="text-[#21B0C7] hover:text-white transition-colors duration-300" target="_blank" rel="noopener noreferrer">Claudius Mainja</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', !isOpen);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', false);
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-white/95');
+                navbar.classList.remove('bg-white/90');
+            } else {
+                navbar.classList.add('bg-white/90');
+                navbar.classList.remove('bg-white/95');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in-up class
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Keyboard navigation support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', false);
+            }
+        });
+
+        // Focus management for accessibility
+        const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('hidden')) {
+                const firstFocusable = mobileMenu.querySelector(focusableElements);
+                firstFocusable?.focus();
+            }
+        });
+
+        // High contrast mode detection and support
+        if (window.matchMedia('(prefers-contrast: high)').matches) {
+            document.body.classList.add('high-contrast');
+        }
+
+        // Reduced motion support
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.body.classList.add('reduce-motion');
+        }
+
+        // Dynamic loading indicator for better UX
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+
+    <style>
+        /* Additional accessibility styles */
+        .high-contrast {
+            filter: contrast(150%);
+        }
+        
+        .reduce-motion * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+        
+        /* Focus indicators */
+        a:focus, button:focus, [tabindex]:focus {
+            outline: 2px solid #21B0C7;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        
+        /* Skip link styles */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        .focus\:not-sr-only:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 0.5rem 1rem;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal;
+        }
+        
+        /* Loading states */
+        body:not(.loaded) .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        body.loaded .fade-in-up {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        /* Enhanced hover states for better interaction feedback */
+        .card-hover {
+            transform: translateZ(0);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px) translateZ(0);
+        }
+        
+        /* Ensure text remains readable on all backgrounds */
+        .text-contrast {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+    </style>
+</body>
+</html>
