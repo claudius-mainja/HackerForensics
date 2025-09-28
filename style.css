@@ -86,3 +86,69 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(33, 176, 199, 0.4);
         }
+             .high-contrast {
+            filter: contrast(150%);
+        }
+        
+        .reduce-motion * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+        
+        /* Focus indicators */
+        a:focus, button:focus, [tabindex]:focus {
+            outline: 2px solid #21B0C7;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        
+        /* Skip link styles */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        .focus\:not-sr-only:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 0.5rem 1rem;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal;
+        }
+        
+        /* Loading states */
+        body:not(.loaded) .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        body.loaded .fade-in-up {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        /* Enhanced hover states for better interaction feedback */
+        .card-hover {
+            transform: translateZ(0);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px) translateZ(0);
+        }
+        
+        /* Ensure text remains readable on all backgrounds */
+        .text-contrast {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }

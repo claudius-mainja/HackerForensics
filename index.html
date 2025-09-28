@@ -107,6 +107,7 @@
 
     <!-- Who We Are Section -->
     <section id="who-we-are" class="py-20 bg-primary" role="region" aria-labelledby="who-we-are-heading">
+        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in-up">
                 <h2 id="who-we-are-heading" class="dm-serif text-4xl lg:text-5xl font-bold text-white mb-2" >Who We Are</h2>
@@ -164,7 +165,7 @@
     <section id="what-we-do" class="py-20 bg-slate-100" role="region" aria-labelledby="what-we-do-heading">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in-up">
-                <h2 id="what-we-do-heading" class="dm-serif text-4xl lg:text-5xl font-bold mb-6" style="color: #02355B;">Our Business Solutions</h2>
+                <h2 id="what-we-do-heading" class="dm-serif text-4xl lg:text-5xl font-bold mb-6 text-primary" >Our Business Solutions</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     We provide comprehensive cybersecurity services that cover every aspect of digital protection, from prevention and assessment to incident response and recovery.
                 </p>
@@ -292,6 +293,12 @@
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-sm card-hover flex items-center justify-center h-20">
                     <img src="/assets/images/client 5.png" alt="">
+                </div>
+                     <div class="bg-white p-6 rounded-lg shadow-sm card-hover flex items-center justify-center h-20">
+                    <img src="/assets/images/client_client 6.png" alt="">
+                </div>
+                                     <div class="bg-white p-6 rounded-lg shadow-sm card-hover flex items-center justify-center h-20">
+                    <img src="/assets/images/client_client 7.png" alt="">
                 </div>
                
             </div>
@@ -519,75 +526,5 @@
             document.body.classList.add('loaded');
         });
     </script>
-
-    <style>
-        /* Additional accessibility styles */
-        .high-contrast {
-            filter: contrast(150%);
-        }
-        
-        .reduce-motion * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-        }
-        
-        /* Focus indicators */
-        a:focus, button:focus, [tabindex]:focus {
-            outline: 2px solid #21B0C7;
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-        
-        /* Skip link styles */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        .focus\:not-sr-only:focus {
-            position: static;
-            width: auto;
-            height: auto;
-            padding: 0.5rem 1rem;
-            margin: 0;
-            overflow: visible;
-            clip: auto;
-            white-space: normal;
-        }
-        
-        /* Loading states */
-        body:not(.loaded) .fade-in-up {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        
-        body.loaded .fade-in-up {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        
-        /* Enhanced hover states for better interaction feedback */
-        .card-hover {
-            transform: translateZ(0);
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px) translateZ(0);
-        }
-        
-        /* Ensure text remains readable on all backgrounds */
-        .text-contrast {
-            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-        }
-    </style>
 </body>
 </html>
